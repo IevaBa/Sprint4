@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="title" content="Shopping list" />
+    <meta
+      name="description"
+      content="It's a Shopping List app, helping you to organise your shopping and making it much easier"
+    />
+    <!-- Open graph meta tags -->
+    <meta
+      property="og:title"
+      content="Make your shopping experience easy and fun"
+    />
+    <meta
+      property="og:description"
+      content="Try my new Shopping List app and never forget what you actually went for"
+    />
+    <meta
+      property="og:image"
+      content="https://play-lh.googleusercontent.com/QD0c4ir2agdTZrtQToUM7mCwgKIWS7G0Xt5F1KvwWMnYMB5bEFyRhjzDOIbHvrii7JY"
+    />
+    <meta property="og:url" content="https://ievaba.github.io/Sprint4/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter mata tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Make your shopping experience easy and fun!"
+    />
+    <meta
+      name="twitter:description"
+      content="Try my new Shopping List app and never forget what you actually went for"
+    />
+    <meta
+      name="twitter:image"
+      content="https://play-lh.googleusercontent.com/QD0c4ir2agdTZrtQToUM7mCwgKIWS7G0Xt5F1KvwWMnYMB5bEFyRhjzDOIbHvrii7JY"
+    />
+    <meta name="twitter:url" content="https://ievaba.github.io/Sprint4/" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <header>
+      <h1>Shopping List</h1>
+      <div class="search">
+        <input type="text" id="filter" placeholder="Search items..." />
+      </div>
+    </header>
+    <main>
+      <form>
+        <input type="text" class="todo-input" placeholder="Add new item..." />
+        <button class="todo-button" type="submit">Add</button>
+        <button class="delete-all">Clear all</button>
+      </form>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+    </main>
+    <footer>
+      <p>
+        &#169; Copyright Ieva Baltriukaitė,
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
