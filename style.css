@@ -32,8 +32,7 @@ form button {
   border: none;
   background: white;
 }
-.todo-button,
-.delete-all {
+button {
   background: #f37676;
   color: white;
   border: none;
@@ -43,13 +42,25 @@ form button {
   transition: all 200ms ease;
   cursor: pointer;
 }
-.todo-button {
+.todo-button,
+.complete-btn {
   background: rgb(124, 202, 124);
 }
-.todo-button:hover {
+.todo-button:hover,
+.complete-btn:hover {
   background: rgb(78, 177, 78);
 }
-.delete-all:hover {
+.edit-btn {
+  background: rgb(70, 183, 227);
+}
+.edit-btn:hover {
+  background: rgb(23, 161, 216);
+}
+.delete-all {
+  background: #f37676;
+}
+.delete-all:hover,
+.delete-btn:hover {
   background: #ee6767;
 }
 #filter {
@@ -58,6 +69,31 @@ form button {
   margin-left: 2rem;
   font-size: 1.5rem;
   border-radius: 0.1rem;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 50%;
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo li {
+  flex: 1;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
 }
 footer {
   position: fixed;
