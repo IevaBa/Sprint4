@@ -80,20 +80,29 @@ button {
   list-style: none;
   margin-bottom: 2.5rem;
 }
-.todo {
+.todo-item {
   margin: 0.5rem;
   background: white;
   color: black;
   font-size: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s ease;
+  padding-left: 0.5rem;
 }
-.todo li {
-  flex: 1;
+.todo-name {
+  flex-grow: 1;
 }
-.todo-item {
-  padding: 0rem 0.5rem;
+.fa-trash,
+.fa-check,
+.fa-pen-to-square {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 footer {
   position: fixed;
