@@ -3,11 +3,13 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const deleteALL = document.querySelector(".delete-all");
+const filter = document.getElementById("filter");
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheckEdit);
+filter.addEventListener("keyup", filterItems);
 
 // Functions
 function addTodo(event) {
@@ -130,3 +132,16 @@ function removeLocalTodos(todo) {
 deleteALL.addEventListener("click", function () {
   localStorage.clear();
 });
+//SEARCH AN ITEM
+function filterItems(e) {
+  let text = e.target.value.toLowerCase();
+  let items = todoList.getElementsByClassName("todo-item");
+  Array.from(items).forEach(function (item) {
+    let itemName = item.firstChild.textContent;
+    if (itemName.toLowerCase().indexOf(text) !== -1) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
