@@ -21,7 +21,7 @@
 ## Launch procedure
 
 To see my project press the link
-[Shopping List App](https://ievaba.github.io/Sprint2/)
+[Shopping List App](https://ievaba.github.io/Sprint4/)
 
 ## Author
 
