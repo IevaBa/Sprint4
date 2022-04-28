@@ -4,6 +4,7 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const deleteALL = document.querySelector(".delete-all");
 const filter = document.getElementById("filter");
+let todos = [];
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", getTodos);
@@ -67,8 +68,10 @@ function deleteCheckEdit(event) {
   if (item.classList[0] === "edit-btn") {
     const todo = item.parentElement;
     const editItem = prompt("Edit selected item", todo.textContent);
-    const todoName = todo.querySelector(".todo-name");
-    todoName.textContent = editItem;
+    if (editItem) {
+      const todoName = todo.querySelector(".todo-name");
+      todoName.textContent = editItem;
+    }
   }
 }
 //SAVE TO LOCAL STORAGE
